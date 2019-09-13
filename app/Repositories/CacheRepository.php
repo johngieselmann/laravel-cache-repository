@@ -36,7 +36,6 @@ class CacheRepository
     protected $cacheKeys = [
         '{{id}}',
         '{{id}}.data',
-        'slug.{{slug}}',
     ];
 
     /**
@@ -300,10 +299,8 @@ class CacheRepository
                             $cacheKeys[$k] = $this->setCachePlaceholder($cacheKeys[$k], $match, $resource->$field);
                         }
                     }
-
                 }
             }
-
         }
 
         // TODO: figure out multi-dimensional / multi-relationships in single key
