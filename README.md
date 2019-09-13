@@ -12,4 +12,23 @@ DRY baby.
 
 ## CacheRepository
 
+### Storing Objects
+For storing objects in the cache I recreated some of the recreated Laravel methods.
+
+```
+put()
+set()
+remember()
+```
+
+
+### Busting the Cache
+In order to bust the cache, all you need to do is call the `bustCache()` method
+from the repository. The only parameter is the model you want to bust all the
+cache for.
+
+```
+$repo->bustCache($resource);
+```
+
 ## Individual Repositories
